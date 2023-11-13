@@ -123,5 +123,8 @@ jobs:
       #  run: |
       #     cd polymer/example/polybench
       #    LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${PWD}/tools/mlir/tools/polymer/pluto/lib" ./sanity-check-data EXTRALARGE 
-
+      - uses: actions/download-artifact@v3
+        with:
+          name: polymer
+          path: polymer/build      
 
